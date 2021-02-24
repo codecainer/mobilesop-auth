@@ -34,7 +34,7 @@ const config = {
 
 const port = process.env.PORT || 8080;
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
-  config.baseURL = `http://207.246.73.27:${port}`;
+  config.baseURL = `https://mobilesop-auth-6wbgy.ondigitalocean.app:${port}`;
 }
 
 app.use(auth(config));

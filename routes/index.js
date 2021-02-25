@@ -57,8 +57,11 @@ router.get('/menu-calendar-duty', requiresAuth(), function (req, res, next) {
   });
 });
 
-router.get('/stations', (req, res) => {
-  res.render('stations');
+router.get('/stations', requiresAuth(), function (req, res, next) {
+  res.render('stations', {
+    userProfile: JSON.stringify(req.oidc.user, null, 2),
+    title: 'Station Locations'
+  });
 });
 
 router.get('/assets', (req, res) => {

@@ -15,6 +15,13 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('images'));
+app.use(express.static('css'));
+app.use(express.static('js'));
+app.use(express.static('fonts'));
+app.use(express.static('app'));
+app.use(express.static('webfonts'));
+app.use('/static', express.static('public'))
 app.use(express.json());
 
 const config = {

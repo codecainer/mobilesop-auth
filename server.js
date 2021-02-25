@@ -31,7 +31,7 @@ const config = {
 
 const port = process.env.PORT || 3000;
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
-  config.baseURL = `https://aappsample1.com:${port}`;
+  config.baseURL = `https://appsample1.com:${port}`;
 }
 
 app.use(auth(config));
